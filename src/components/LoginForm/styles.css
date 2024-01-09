@@ -1,0 +1,189 @@
+/* Estilos para o formulário de login */
+.login-container {
+  position: relative; /* Precisamos definir o posicionamento relativo para elementos filhos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 50px;
+  margin: 150px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  max-width: 100%; /* Novo ajuste para responsividade */
+  text-align: left;
+  overflow: hidden; /* Garante que o overflow não exiba o pseudo-elemento */
+  margin-bottom: 80px; 
+}
+
+.login-container::before {
+  content: ""; /* Adiciona um conteúdo ao elemento pseudo */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-oxford-blue); /* Cor de fundo */
+  opacity: 0.8; /* Ajuste a opacidade de 0 a 1 conforme necessário */
+  z-index: -1; /* Empurra para trás do conteúdo do contêiner */
+  border-radius: 8px; /* Para coincidir com o contêiner */
+}
+
+.input-field {
+  background-color: var(--bg-oxford-blue-alpha-90);
+  color: var(--text-white);
+  font-size: var(--fontSize-5);
+  padding: 18px 12px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border-purple-alpha-30);
+  margin-block-end: 15px;
+  outline: none;
+  width: 350px;
+}
+
+/* Estilos para o botão */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* Estilos para os rótulos dos campos de entrada */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Estilos dos textos */
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.title-loginform { color: var(--text-white); }
+
+.h1-loginform,
+.h3-loginform { line-height: 1.3; 
+  margin-bottom: 20px;
+}
+
+.h1-loginform {
+  font-size: var(--fontSize-1);
+  font-weight: var(--weight-semiBold);
+}
+
+.h2-loginform {
+  font-size: var(--fontSize-2);
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.h3-loginform { font-size: var(--fontSize-3); }
+
+.section-title-loginform,
+.section-subtitle-loginform,
+.section-text-loginform { text-align: center;
+  margin-bottom: 20px; }
+
+.section-subtitle-loginform {
+  color: var(--text-white);
+  font-weight: var(--weight-semiBold);
+  font-size: var(--fontSize-5);
+  text-transform: uppercase;
+}
+
+.btn-loginform {
+  position: relative;
+  background-image: var(--gradient-1);
+  color: var(--text-white);
+  font-size: var(--fontSize-6);
+  font-weight: var(--weight-semiBold);
+  max-width: max-content;
+  min-width: 180px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  padding-inline: 30px;
+  clip-path: var(--clip-path-3);
+  overflow: hidden;
+  margin-top: 30px; 
+}
+
+.btn-loginform::before {
+  content: "";
+  position: absolute;
+  top: var(--top, 50%);
+  left: var(--left, 50%);
+  width: 250%;
+  padding-block-end: 250%;
+  background-color: var(--bg-purple);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: var(--radius-circle);
+  z-index: -1;
+  transition: transform var(--transition-2);
+}
+
+.btn-loginform:is(:hover, :focus-visible)::before { transform: translate(-50%, -50%) scale(1); }
+
+.w-100 { width: 100%; }
+
+.section-loginform { padding-block: var(--section-spacing); }
+
+.section-title-loginform {
+  margin-block: 10px;
+  text-transform: uppercase;
+}
+
+.section-title-loginform .span {
+  display: inline;
+  color: var(--text-purple);
+}
+
+.section-text-loginform {
+  margin-block-end: 40px;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.section-text-loginform a {
+  text-decoration: underline; /* Adiciona sublinhado aos links */
+}
+
+.social-wrapper-loginform {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.img-holder-loginform {
+  background-color: var(--bg-purple);
+  aspect-ratio: var(--width) / var(--height);
+  overflow: hidden;
+}
+
+.img-cover-loginform {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Outros estilos... */
+
+/* Media Query para dispositivos menores */
+@media screen and (max-width: 768px) {
+  .login-container {
+    width: 90%; /* Ajuste o tamanho conforme necessário */
+  }
+  
+  .input-field {
+    width: 100%; /* Faz com que o input ocupe 100% da largura */
+  }
+  
+  /* Outros ajustes de responsividade conforme necessário */
+}

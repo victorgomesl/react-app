@@ -1,0 +1,15 @@
+/* Estilos para a página de notícias */
+.container-ndetalhes {
+  max-width: 900px;
+  margin: 180px auto 80px; /* Margem superior de 180px, centralizado horizontalmente, margem inferior de 80px */
+  padding: 20px;
+}
+
+/* Estilização do botão "Voltar para Notícias" */
+.pagination button,
+.pagination span {
+  padding: 2px;
+  margin: 0 3px;
+  background-color: transparent;
+  cursor: pointer;
+}
